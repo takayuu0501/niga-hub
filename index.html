@@ -4,105 +4,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NEON HUB | My Portal</title>
+<meta name="theme-color" content="#080b18">
+<title>NEON HUB</title>
 <style>
-:root {
-  --accent:#00f5ff;
-  --bg:#070b18;
-  --panel:rgba(12,20,42,.84);
-}
+:root{--bg:#080b18;--accent:#00f5ff;--panel:rgba(15,23,48,.88)}
 *{box-sizing:border-box}
-body{
-  margin:0;min-height:100vh;color:#f2f7ff;
-  font-family:Arial,"Noto Sans JP",sans-serif;
-  background-color:var(--bg);
-  background-image:
-    radial-gradient(ellipse at top left,#17295b88,transparent 55%),
-    linear-gradient(135deg,#050816dd,#10152ddd);
-  background-size:cover;background-position:center;
-  background-attachment:fixed;
-}
+body{margin:0;min-height:100vh;background:var(--bg);color:#f4f7ff;font-family:system-ui,sans-serif;background-size:cover;background-position:center;background-attachment:fixed}
 button,input,select{font:inherit}
-button,a{ -webkit-tap-highlight-color:transparent }
-button{cursor:pointer}
+button,a{touch-action:manipulation}
 a{color:inherit;text-decoration:none}
-button:focus-visible,a:focus-visible,input:focus-visible{
-  outline:2px solid var(--accent);outline-offset:3px
-}
-header{
-  padding:22px 5%;display:flex;justify-content:space-between;
-  align-items:center;gap:15px;flex-wrap:wrap;
-  border-bottom:1px solid #ffffff20;
-  background:#070b18a8;backdrop-filter:blur(12px)
-}
-.logo{font-size:24px;font-weight:900;letter-spacing:3px}
-.logo span{color:var(--accent);text-shadow:0 0 15px var(--accent)}
-#clock{color:#a8b8d9;font-size:13px}
-main{max-width:1100px;margin:auto;padding:28px 18px 55px}
-.hero{text-align:center;padding:22px 0 26px}
-.tag{color:var(--accent);font-size:12px;letter-spacing:4px}
-h1{font-size:clamp(34px,7vw,64px);margin:12px 0}
-h1 span{color:var(--accent);text-shadow:0 0 25px #00f5ff55}
-.sub{color:#a9b9d5;font-size:14px}
-.panel{
-  border:1px solid #8baaff35;border-radius:18px;
-  background:var(--panel);backdrop-filter:blur(14px);
-  padding:22px;margin:17px 0;
-  box-shadow:0 10px 40px #0002
-}
-h2{font-size:17px;margin:0 0 17px}
-h2 small{font-size:10px;color:var(--accent);letter-spacing:2px;margin-left:8px}
-.searchrow{display:flex;gap:9px;flex-wrap:wrap}
-input,select{
-  color:white;background:#080e20;border:1px solid #ffffff25;
-  border-radius:10px;padding:12px;min-width:0
-}
-.searchrow input{flex:1;min-width:140px}
-select option{background:#080e20}
-.btn{
-  background:linear-gradient(135deg,#00d9ff,#7866ff);
-  color:#030918;font-weight:bold;border:0;border-radius:10px;
-  padding:12px 17px;transition:.2s
-}
-.btn:hover{filter:brightness(1.16);transform:translateY(-1px)}
-.btn.secondary{background:#182541;color:#eaf4ff;border:1px solid #ffffff22}
-.btn.full{width:100%;margin-top:12px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.shortcut{
-  min-height:105px;padding:17px 8px;border-radius:13px;
-  background:#101a31;border:1px solid #ffffff12;
-  text-align:center;transition:.2s;display:flex;
-  flex-direction:column;justify-content:center;gap:8px
-}
-.shortcut:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 0 18px #00f5ff18}
-.shortcut .emoji{font-size:27px}
-.shortcut strong{font-size:13px}
-.shortcut small{font-size:10px;color:#8ea2c7}
-.gamebox{border-color:#00f5ff55}
-.game-status{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:17px}
-.stat{background:#080f21;padding:10px 14px;border-radius:10px;flex:1;min-width:90px}
-.stat small{display:block;color:#8da1c5;font-size:11px}
-.stat strong{font-size:22px;color:var(--accent)}
-#prompt{
-  min-height:78px;display:grid;place-items:center;text-align:center;
-  font-size:clamp(22px,5vw,35px);font-weight:bold;
-  letter-spacing:3px;background:#070d1e;border-radius:12px;
-  padding:16px;margin:10px 0
-}
-#gameInput{width:100%;font-size:17px}
-.hint{font-size:12px;color:#9aaccb;line-height:1.7}
-.settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.field{display:flex;flex-direction:column;gap:8px;font-size:12px;color:#a9bbd9}
-.field input,.field select{width:100%}
-input[type=color]{height:45px;padding:5px}
-input[type=file]{font-size:11px}
-footer{text-align:center;padding:22px;color:#7184a8;font-size:11px}
-@media(max-width:600px){
- .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .settings{grid-template-columns:1fr}
- header{padding:16px 5%}
- .panel{padding:16px}
-}
+button{cursor:pointer}
+header{padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:#080b18cc;border-bottom:1px solid #ffffff20}
+.logo{font-size:25px;font-weight:900;letter-spacing:3px}
+.logo span,h1 span{color:var(--accent);text-shadow:0 0 18px var(--accent)}
+#clock{color:#a9b8d5;font-size:12px}
+main{max-width:1050px;margin:auto;padding:20px 16px 50px}
+.hero{text-align:center;padding:35px 0}
+.hero small{letter-spacing:4px;color:var(--accent)}
+h1{font-size:clamp(36px,8vw,65px);margin:10px 0}
+.muted{color:#a9b8d5;font-size:13px;line-height:1.7}
+.panel{padding:20px;margin:16px 0;background:var(--panel);border:1px solid #9eb7ff30;border-radius:17px;backdrop-filter:blur(14px);box-shadow:0 12px 35px #0002}
+h2{font-size:17px;margin:0 0 16px}
+h2 small{font-size:10px;letter-spacing:2px;color:var(--accent);margin-left:8px}
+.row{display:flex;gap:9px;flex-wrap:wrap}
+input,select{min-width:0;padding:12px;color:white;background:#080e20;border:1px solid #ffffff25;border-radius:10px}
+.row input{flex:1}
+option{background:#080e20}
+.btn{padding:12px 16px;background:linear-gradient(120deg,#00e5ff,#8770ff);border:0;border-radius:10px;color:#05091a;font-weight:800}
+.btn:hover{filter:brightness(1.13)}
+.btn.alt{background:#172441;color:white;border:1px solid #ffffff20}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tile{display:flex;min-height:100px;padding:12px 6px;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;background:#111b34;border:1px solid #ffffff12;border-radius:13px;transition:.2s}
+.tile:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tile .emoji{font-size:25px}
+.tile strong{font-size:12px}
+.tile small{font-size:10px;color:#9aacca}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:13px}
+.stat{background:#080f21;padding:12px;border-radius:10px}
+.stat small{display:block;color:#a4b6d8;font-size:11px}
+.stat strong{display:block;color:var(--accent);font-size:24px}
+#word{min-height:78px;display:grid;place-items:center;text-align:center;background:#080e20;border-radius:12px;font-size:clamp(24px,5vw,36px);font-weight:900;letter-spacing:3px;padding:14px;overflow-wrap:anywhere}
+#typeInput{width:100%;margin:12px 0}
+.note{font-size:12px;color:#a4b6d8;line-height:1.8}
+.field{display:flex;flex-direction:column;gap:8px;color:#a4b6d8;font-size:12px}
+.field input{width:100%}
+.settings{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+input[type=color]{height:44px;padding:4px}
+#reactionArea{height:160px;width:100%;border-radius:13px;border:1px solid #ffffff25;background:#080e20;color:white;font-weight:800}
+#reactionArea.ready{background:#145b4a;color:#fff}
+#reactionArea.wait{background:#70253c}
+footer{text-align:center;color:#8394b5;padding:20px;font-size:11px}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.settings{grid-template-columns:1fr}.panel{padding:15px}.hero{padding:24px 0}.logo{font-size:21px}}
 </style>
 </head>
 <body>
@@ -113,262 +65,268 @@ footer{text-align:center;padding:22px;color:#7184a8;font-size:11px}
 
 <main>
   <section class="hero">
-    <div class="tag">YOUR WORLD · YOUR RULES</div>
-    <h1>NEON <span>PORTAL</span></h1>
-    <div class="sub">検索・ゲーム・タイピング。全部ここから。</div>
+    <small>YOUR WORLD · YOUR RULES</small>
+    <h1>NEON <span>HUB</span></h1>
+    <div class="muted">検索・ゲーム・タイピング。自分だけのポータル。</div>
   </section>
 
   <section class="panel">
-    <h2>⌕ SEARCH <small>WEB ACCESS</small></h2>
-    <form id="searchForm" class="searchrow">
-      <select id="engine" aria-label="検索先">
+    <h2>⌕ SEARCH <small>WEB SEARCH</small></h2>
+    <form id="searchForm" class="row">
+      <select id="engine" aria-label="検索サービス">
         <option value="google">Google</option>
         <option value="youtube">YouTube</option>
         <option value="bing">Bing</option>
       </select>
-      <input id="query" placeholder="何を検索する？" autocomplete="off">
-      <button class="btn" type="submit">検索 ↗</button>
+      <input id="query" placeholder="検索ワードを入力..." autocomplete="off">
+      <button class="btn">検索 ↗</button>
     </form>
-    <p class="hint">選んだサービスで検索するよ。外部サイトは新しいタブで開きます。</p>
+    <p class="note">検索先のサービスを新しいタブで開くよ。</p>
   </section>
 
   <section class="panel">
     <h2>⚡ QUICK ACCESS <small>SHORTCUTS</small></h2>
     <div class="grid">
-      <a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🔎</span><strong>Google</strong><small>WEB SEARCH</small>
-      </a>
-      <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">▶️</span><strong>YouTube</strong><small>VIDEOS</small>
-      </a>
-      <a class="shortcut" href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🌐</span><strong>Bing</strong><small>SEARCH</small>
-      </a>
-      <a class="shortcut" href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🎮</span><strong>Scratch</strong><small>GAMES & CREATE</small>
-      </a>
-      <a class="shortcut" href="https://typing.twi1.me/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">⌨️</span><strong>マイタイピング</strong><small>TYPING</small>
-      </a>
-      <a class="shortcut" href="https://www.google.com/search?q=タイピングコロシアム+公式" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🏆</span><strong>タイピングコロシアム</strong><small>公式サイトを探す</small>
-      </a>
-      <a class="shortcut" href="https://www.crazygames.com/" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🕹️</span><strong>CrazyGames</strong><small>BROWSER GAMES</small>
-      </a>
-      <a class="shortcut" href="https://www.google.com/search?q=無料+ブラウザゲーム" target="_blank" rel="noopener noreferrer">
-        <span class="emoji">🚀</span><strong>ゲームを探す</strong><small>DISCOVER</small>
-      </a>
+      <a class="tile" href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><span class="emoji">🔎</span><strong>Google</strong><small>SEARCH</small></a>
+      <a class="tile" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><span class="emoji">▶️</span><strong>YouTube</strong><small>VIDEOS</small></a>
+      <a class="tile" href="https://www.bing.com/" target="_blank" rel="noopener noreferrer"><span class="emoji">🌐</span><strong>Bing</strong><small>SEARCH</small></a>
+      <a class="tile" href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer"><span class="emoji">🧩</span><strong>Scratch</strong><small>CREATE GAMES</small></a>
+      <a class="tile" href="https://typing.twi1.me/" target="_blank" rel="noopener noreferrer"><span class="emoji">⌨️</span><strong>マイタイピング</strong><small>TYPING</small></a>
+      <a class="tile" href="https://www.google.com/search?q=タイピングコロシアム+公式サイト" target="_blank" rel="noopener noreferrer"><span class="emoji">🏆</span><strong>タイピングコロシアム</strong><small>公式サイトを検索</small></a>
+      <a class="tile" href="https://www.crazygames.com/" target="_blank" rel="noopener noreferrer"><span class="emoji">🕹️</span><strong>CrazyGames</strong><small>BROWSER GAMES</small></a>
+      <a class="tile" href="https://www.coolmathgames.com/" target="_blank" rel="noopener noreferrer"><span class="emoji">🎲</span><strong>Coolmath Games</strong><small>PUZZLES</small></a>
     </div>
   </section>
 
-  <section class="panel gamebox" id="typing">
-    <h2>⌨️ NEON TYPING <small>MINI GAME</small></h2>
-    <div class="game-status">
-      <div class="stat"><small>残り時間</small><strong id="time">30</strong><small>秒</small></div>
-      <div class="stat"><small>スコア</small><strong id="score">0</strong><small>正解数</small></div>
+  <section class="panel" id="typing">
+    <h2>⌨️ NEON TYPING <small>30 SECOND CHALLENGE</small></h2>
+    <div class="stats">
+      <div class="stat"><small>残り時間</small><strong id="time">30</strong></div>
+      <div class="stat"><small>正解数</small><strong id="score">0</strong></div>
       <div class="stat"><small>正確率</small><strong id="accuracy">100%</strong></div>
     </div>
-    <div id="prompt">START を押そう！</div>
-    <form id="typingForm" class="searchrow">
-      <input id="gameInput" placeholder="ここに表示された言葉を入力" disabled autocomplete="off" autocapitalize="off">
-      <button class="btn" id="startBtn" type="button">START</button>
-    </form>
-    <p class="hint" id="gameMessage">30秒間で何問正解できるかな？ 表示された言葉をそのまま入力しよう！</p>
+    <div id="word">START を押そう！</div>
+    <input id="typeInput" placeholder="ここに表示された言葉を入力" autocomplete="off" disabled>
+    <div class="row">
+      <button class="btn" id="startTyping">START</button>
+    </div>
+    <p id="typeMessage" class="note">表示されたローマ字をそのまま入力しよう！</p>
+  </section>
+
+  <section class="panel">
+    <h2>🎯 REACTION TEST <small>REFLEX GAME</small></h2>
+    <p class="note">STARTを押して、画面が緑になったらすぐ押そう。緑になる前に押すとやり直し！</p>
+    <button id="reactionArea">START を押して挑戦</button>
+    <p id="reactionMessage" class="note">反応時間をミリ秒で計測するよ。</p>
   </section>
 
   <section class="panel">
     <h2>🎨 CUSTOMIZE <small>YOUR SPACE</small></h2>
     <div class="settings">
       <label class="field">背景色
-        <input type="color" id="bgColor" value="#070b18">
+        <input type="color" id="bgColor" value="#080b18">
       </label>
       <label class="field">ネオンカラー
         <input type="color" id="accentColor" value="#00f5ff">
       </label>
-      <label class="field">背景画像のURL
-        <input id="imageUrl" type="url" placeholder="https://example.com/wallpaper.jpg">
+      <label class="field">壁紙画像のURL
+        <input type="url" id="imageUrl" placeholder="https://example.com/image.jpg">
       </label>
-      <label class="field">背景画像をファイルから選択
-        <input id="imageFile" type="file" accept="image/*">
+      <label class="field">壁紙ファイル
+        <input type="file" id="imageFile" accept="image/*">
       </label>
     </div>
-    <div class="searchrow" style="margin-top:14px">
-      <button class="btn" id="applyBg" type="button">背景を適用</button>
-      <button class="btn secondary" id="saveSettings" type="button">設定を保存</button>
-      <button class="btn secondary" id="resetSettings" type="button">初期状態に戻す</button>
+    <div class="row" style="margin-top:14px">
+      <button class="btn" id="apply">適用</button>
+      <button class="btn alt" id="save">設定を保存</button>
+      <button class="btn alt" id="reset">リセット</button>
     </div>
-    <p class="hint">設定はこのブラウザ内に保存されます。画像ファイルはこのページで使うために読み込みます。大きな画像は動作が重くなることがあるよ。</p>
+    <p class="note">画像は自分が使う権利のあるものを選んでね。設定はこのブラウザ内に保存されるよ。</p>
   </section>
 
   <section class="panel">
-    <h2>📺 VIDEO SEARCH <small>FIND CONTENT</small></h2>
-    <form id="videoForm" class="searchrow">
-      <input id="videoQuery" placeholder="見たい動画を検索">
-      <button class="btn" type="submit">YouTubeで探す ↗</button>
+    <h2>📺 VIDEO SEARCH <small>YOUTUBE</small></h2>
+    <form id="videoForm" class="row">
+      <input id="videoQuery" placeholder="見たい動画を検索...">
+      <button class="btn">YouTubeで検索 ↗</button>
     </form>
-    <p class="hint">動画はYouTubeで検索できます。ダウンロードは権利者が許可した方法を利用してね。</p>
+    <p class="note">動画の保存は、権利者が許可したダウンロード方法を使ってね。</p>
   </section>
 </main>
-<footer>NEON HUB · PERSONAL PORTAL · BUILT FOR YOU</footer>
+<footer>NEON HUB · PERSONAL GAMING PORTAL</footer>
 
 <script>
 const $ = id => document.getElementById(id);
-const safeOpen = url => window.open(url, "_blank", "noopener,noreferrer");
+const openTab = url => window.open(url, "_blank", "noopener,noreferrer");
 
-function updateClock(){
+function clock(){
   $("clock").textContent = new Date().toLocaleString("ja-JP", {
     month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"
-  }) + "  / SYSTEM ONLINE";
+  }) + " · ONLINE";
 }
-updateClock();
-setInterval(updateClock,1000);
+clock();
+setInterval(clock,1000);
 
 // Search
 $("searchForm").addEventListener("submit", e => {
   e.preventDefault();
   const q = $("query").value.trim();
-  if(!q){ $("query").focus(); return; }
+  if(!q){$("query").focus();return;}
   const urls = {
     google:"https://www.google.com/search?q=",
     youtube:"https://www.youtube.com/results?search_query=",
     bing:"https://www.bing.com/search?q="
   };
-  safeOpen(urls[$("engine").value] + encodeURIComponent(q));
+  openTab(urls[$("engine").value]+encodeURIComponent(q));
 });
 $("videoForm").addEventListener("submit", e => {
   e.preventDefault();
-  const q = $("videoQuery").value.trim();
-  if(q) safeOpen("https://www.youtube.com/results?search_query=" + encodeURIComponent(q));
+  const q=$("videoQuery").value.trim();
+  if(q) openTab("https://www.youtube.com/results?search_query="+encodeURIComponent(q));
 });
 
-// Background customization
-let uploadedImage = "";
+// Background settings
+let localImage="";
 function applyBackground(){
-  document.body.style.backgroundColor = $("bgColor").value;
   document.documentElement.style.setProperty("--bg",$("bgColor").value);
   document.documentElement.style.setProperty("--accent",$("accentColor").value);
-  const url = uploadedImage || $("imageUrl").value.trim();
-  document.body.style.backgroundImage = url
-    ? `linear-gradient(#05081699,#050816aa),url("${url.replace(/["\\\n\r]/g,"")}")`
-    : "radial-gradient(ellipse at top left,#17295b88,transparent 55%),linear-gradient(135deg,#050816dd,#10152ddd)";
+  const url=localImage || $("imageUrl").value.trim();
+  document.body.style.backgroundColor=$("bgColor").value;
+  document.body.style.backgroundImage=url
+    ? `linear-gradient(#05081688,#05081699),url("${url.replace(/["\\\n\r]/g,"")}")`
+    : "radial-gradient(ellipse at top left,#17295b88,transparent 55%),linear-gradient(135deg,#050816,#10152d)";
 }
-$("imageFile").addEventListener("change", e => {
-  const file = e.target.files[0];
-  if(!file) return;
-  if(!file.type.startsWith("image/")){
-    alert("画像ファイルを選択してね。"); return;
-  }
-  if(file.size > 4*1024*1024){
-    alert("画像は4MB以下がおすすめだよ。"); return;
-  }
-  const reader = new FileReader();
-  reader.onload = () => {
-    uploadedImage = reader.result;
-    $("imageUrl").value = "";
+$("apply").addEventListener("click",()=>{localImage="";applyBackground();});
+$("imageFile").addEventListener("change",e=>{
+  const file=e.target.files[0];
+  if(!file)return;
+  if(!file.type.startsWith("image/")){alert("画像ファイルを選択してね。");return;}
+  if(file.size>2*1024*1024){alert("2MB以下の画像を使ってね。");return;}
+  const reader=new FileReader();
+  reader.onload=()=>{
+    localImage=reader.result;
+    $("imageUrl").value="";
     applyBackground();
   };
   reader.readAsDataURL(file);
 });
-$("applyBg").addEventListener("click", () => {
-  uploadedImage = "";
-  applyBackground();
-});
-$("saveSettings").addEventListener("click", () => {
+$("save").addEventListener("click",()=>{
   try{
-    localStorage.setItem("neonHubSettings",JSON.stringify({
+    localStorage.setItem("neonHub",JSON.stringify({
       bg:$("bgColor").value,
       accent:$("accentColor").value,
-      image:uploadedImage || $("imageUrl").value.trim()
+      image:localImage||$("imageUrl").value.trim()
     }));
     alert("設定を保存したよ！");
-  }catch(e){
-    alert("保存できなかったよ。画像を小さくするか、URL画像を使ってみてね。");
-  }
+  }catch(e){alert("保存できなかったよ。画像を小さくするか、URLを使ってね。");}
 });
-$("resetSettings").addEventListener("click", () => {
-  $("bgColor").value="#070b18";
+$("reset").addEventListener("click",()=>{
+  $("bgColor").value="#080b18";
   $("accentColor").value="#00f5ff";
   $("imageUrl").value="";
   $("imageFile").value="";
-  uploadedImage="";
-  try{localStorage.removeItem("neonHubSettings")}catch(e){}
+  localImage="";
+  try{localStorage.removeItem("neonHub");}catch(e){}
   applyBackground();
 });
 try{
-  const saved=JSON.parse(localStorage.getItem("neonHubSettings")||"null");
-  if(saved){
-    if(/^#[0-9a-f]{6}$/i.test(saved.bg||"")) $("bgColor").value=saved.bg;
-    if(/^#[0-9a-f]{6}$/i.test(saved.accent||"")) $("accentColor").value=saved.accent;
-    if(saved.image){
-      if(saved.image.startsWith("data:image/")) uploadedImage=saved.image;
-      else if(/^https?:\/\//i.test(saved.image)) $("imageUrl").value=saved.image;
-    }
+  const s=JSON.parse(localStorage.getItem("neonHub")||"null");
+  if(s){
+    if(/^#[0-9a-f]{6}$/i.test(s.bg||""))$("bgColor").value=s.bg;
+    if(/^#[0-9a-f]{6}$/i.test(s.accent||""))$("accentColor").value=s.accent;
+    if((s.image||"").startsWith("data:image/"))localImage=s.image;
+    else if(/^https?:\/\//i.test(s.image||""))$("imageUrl").value=s.image;
   }
 }catch(e){}
 applyBackground();
 
-// Mini typing game
-const words = [
- "ねこ","いぬ","さくら","りんご","でんしゃ","ひこうき",
- "やきゅう","すのーぼーど","ほしぞら","かいぞく","こうそく",
- "ゲーム","たいぴんぐ","にほん","みらい","でんせつ",
- "しんかんせん","おにぎり","うちゅう","ぼうけん",
- "あおぞら","なつやすみ","ひみつきち","きょうりゅう",
- "ぴかぴか","きーぼーど","からあげ","はなび","かがやき"
+// Typing game: romanized strings
+const words=[
+ "neon","gaming","typing","sakura","yakyuu","mirai",
+ "pokemon","snowboard","keyboard","computer","hero",
+ "tokyo","kibou","hikari","uchuu","dragon","speed",
+ "challenge","victory","power","dream","rocket",
+ "game","friend","music","summer","star","legend",
+ "internet","rainbow","diamond","cosmos","ninja"
 ];
-let currentWord="", remaining=30, score=0, attempts=0, correct=0;
-let running=false, timer=null;
+let current="",seconds=30,score=0,attempts=0,correct=0,running=false,timer=null;
 function newWord(){
-  let next;
-  do{next=words[Math.floor(Math.random()*words.length)]}
-  while(words.length>1 && next===currentWord);
-  currentWord=next;
-  $("prompt").textContent=currentWord;
-  $("gameInput").value="";
+  let w;
+  do{w=words[Math.floor(Math.random()*words.length)];}while(w===current&&words.length>1);
+  current=w;
+  $("word").textContent=current;
+  $("typeInput").value="";
 }
-function updateGame(){
-  $("time").textContent=remaining;
+function updateStats(){
+  $("time").textContent=seconds;
   $("score").textContent=score;
   $("accuracy").textContent=(attempts?Math.round(correct/attempts*100):100)+"%";
 }
-function endGame(){
+function endTyping(){
   running=false;
   clearInterval(timer);
-  $("gameInput").disabled=true;
-  $("startBtn").textContent="もう一度";
-  $("prompt").textContent="FINISH!";
-  $("gameMessage").textContent=`終了！ 正解 ${score} 問。正確率 ${attempts?Math.round(correct/attempts*100):100}%！ もう一回挑戦しよう！`;
+  $("typeInput").disabled=true;
+  $("startTyping").textContent="もう一度";
+  $("word").textContent="FINISH!";
+  $("typeMessage").textContent=`終了！ 正解 ${score} 問 · 正確率 ${attempts?Math.round(correct/attempts*100):100}%`;
 }
-function startGame(){
+function startTyping(){
   clearInterval(timer);
-  remaining=30;score=0;attempts=0;correct=0;running=true;
-  $("gameInput").disabled=false;
-  $("startBtn").textContent="リスタート";
-  $("gameMessage").textContent="スタート！ 正確に入力しよう！";
-  newWord();updateGame();$("gameInput").focus();
+  seconds=30;score=0;attempts=0;correct=0;running=true;
+  $("typeInput").disabled=false;
+  $("startTyping").textContent="リスタート";
+  $("typeMessage").textContent="スタート！ 正確に入力しよう。";
+  newWord();updateStats();$("typeInput").focus();
   timer=setInterval(()=>{
-    remaining--;
-    updateGame();
-    if(remaining<=0) endGame();
+    seconds--;updateStats();
+    if(seconds<=0)endTyping();
   },1000);
 }
-$("startBtn").addEventListener("click",startGame);
-$("typingForm").addEventListener("submit",e=>e.preventDefault());
-$("gameInput").addEventListener("input",()=>{
-  if(!running) return;
-  const typed=$("gameInput").value;
-  if(typed===currentWord){
+$("startTyping").addEventListener("click",startTyping);
+$("typeInput").addEventListener("input",()=>{
+  if(!running)return;
+  const v=$("typeInput").value.toLowerCase().trim();
+  if(v===current){
     attempts++;correct++;score++;
-    updateGame();newWord();
-  }else if(typed.length>=currentWord.length){
+    updateStats();newWord();
+  }else if(v.length>=current.length){
     attempts++;
-    $("gameMessage").textContent="おしい！ 表示された言葉を確認してね。";
-    $("gameInput").value="";
-    updateGame();
+    $("typeMessage").textContent="おしい！ 次の言葉に挑戦！";
+    $("typeInput").value="";
+    updateStats();
+  }
+});
+
+// Reaction game
+let reactionState="idle",reactionTimer=null,reactionStart=0;
+const reaction=$("reactionArea");
+reaction.addEventListener("click",()=>{
+  if(reactionState==="idle"||reactionState==="result"){
+    reactionState="waiting";
+    reaction.className="wait";
+    reaction.textContent="緑になるまで待って...";
+    $("reactionMessage").textContent="まだ押さないで！";
+    const delay=1200+Math.random()*2800;
+    reactionTimer=setTimeout(()=>{
+      reactionState="ready";
+      reaction.className="ready";
+      reaction.textContent="今すぐ押せ！";
+      reactionStart=performance.now();
+    },delay);
+  }else if(reactionState==="waiting"){
+    clearTimeout(reactionTimer);
+    reactionState="result";
+    reaction.className="";
+    reaction.textContent="早すぎ！ もう一度";
+    $("reactionMessage").textContent="緑になる前に押しちゃった。";
+  }else if(reactionState==="ready"){
+    const ms=Math.round(performance.now()-reactionStart);
+    reactionState="result";
+    reaction.className="";
+    reaction.textContent=ms+" ms";
+    $("reactionMessage").textContent="反応時間："+ms+"ミリ秒！ もう一度挑戦しよう。";
   }
 });
 </script>
 </body>
 </html>
-
